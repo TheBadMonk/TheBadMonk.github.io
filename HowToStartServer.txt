@@ -1,0 +1,3 @@
+//npm install -g http-server
+//cd to proj
+//http-server -o
