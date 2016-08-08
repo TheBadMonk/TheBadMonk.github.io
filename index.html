@@ -1,1 +1,57 @@
-Hello, Brent!
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--favicon-->
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+
+  <!--styles-->
+  <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+  <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="assets/css/testCss.css"/>
+</head>
+
+<body ng-cloak>
+
+  <div ng-view></div>
+
+  <!--3rd party libraries-->
+  <!--Angular 1.5.8-->
+  <script src="assets/libs/angular-1.5.8/angular.min.js"></script>
+  <script src="assets/libs/angular-1.5.8/angular-route.min.js"></script>
+  <script src="assets/libs/angular-1.5.8/angular-animate.min.js"></script>
+
+  <!--jQuery 3.1.0-->
+  <script src="assets/libs/jquery-3.1.0/jquery-3.1.0.min.js"></script>
+
+  <!--Bootstrap 3.3.7-->
+  <script src="assets/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+
+  <!--Source files-->
+  <!--Routes and app initialization-->
+  <script src="app/app.module.js"></script>
+  <script src="app/app.routes.js"></script>
+
+  <!--Website components-->
+  <script src="app/components/homePage/homePage.js"></script>
+
+  <!--Shared website components-->
+  <script src="app/layout/footer/footer.js"></script>
+  <script src="app/layout/header/header.js"></script>
+  <script src="app/layout/sidebar/sidebar.js"></script>
+  <script src="app/layout/errorPages/error.js"></script>
+
+  <!--Services-->
+  <script src="app/services/myFirstService.js"></script>
+
+</body>
+</html>
