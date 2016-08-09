@@ -1,4 +1,4 @@
 (function(){
   'use strict';
-  var myApp = angular.module('myApp', ['ngRoute', 'ngAnimate']);
+  var app = angular.module('app', ['ngRoute', 'ngAnimate']);
 })();
