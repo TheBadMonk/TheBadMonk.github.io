@@ -14,12 +14,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
 
   <!--styles-->
-  <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+  <!-- <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/> -->
   <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/testCss.css"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 
-<body ng-cloak>
+<body class="body" ng-cloak>
+  <!--Content Area-->
+  <div ng-include="'/app/layout/home/home.html'"></div>
+
 
   <!--3rd party libraries-->
   <!--Angular 1.5.8-->
@@ -40,9 +43,10 @@
   <script src="app/app.routes.js"></script>
 
   <!--Website components-->
-  <script src="app/components/home/home.controller.js"></script>
+  <script src="app/components/homeContent/homeContent.controller.js"></script>
 
   <!--Shared website components-->
+  <script src="app/layout/home/home.controller.js"></script>
   <script src="app/layout/contentArea/contentArea.controller.js"></script>
   <script src="app/layout/footer/footer.controller.js"></script>
   <script src="app/layout/header/header.controller.js"></script>

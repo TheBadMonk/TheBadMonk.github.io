@@ -5,6 +5,6 @@
 
   function homeController($scope) {
     var vm = this;
-    vm.welcomeMessage = "Hello, world!";
+    vm.welcomeMessage = "This is index";
   }
 })();
