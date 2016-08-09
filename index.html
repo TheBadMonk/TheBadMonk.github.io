@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +14,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
 
   <!--styles-->
-  <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/>
+  <!-- <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/> -->
   <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/testCss.css"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 
-<body ng-cloak>
+<body class="body" ng-cloak>
+  <!--Content Area-->
+  <div ng-include="'/app/layout/home/home.html'"></div>
 
-  <div ng-view></div>
 
   <!--3rd party libraries-->
   <!--Angular 1.5.8-->
@@ -42,16 +43,17 @@
   <script src="app/app.routes.js"></script>
 
   <!--Website components-->
-  <script src="app/components/homePage/homePage.js"></script>
+  <script src="app/components/homeContent/homeContent.controller.js"></script>
 
   <!--Shared website components-->
-  <script src="app/layout/footer/footer.js"></script>
-  <script src="app/layout/header/header.js"></script>
-  <script src="app/layout/sidebar/sidebar.js"></script>
-  <script src="app/layout/errorPages/error.js"></script>
+  <script src="app/layout/home/home.controller.js"></script>
+  <script src="app/layout/contentArea/contentArea.controller.js"></script>
+  <script src="app/layout/footer/footer.controller.js"></script>
+  <script src="app/layout/header/header.controller.js"></script>
+  <script src="app/layout/sidebar/sidebar.controller.js"></script>
+  <script src="app/layout/errorPages/error.controller.js"></script>
 
   <!--Services-->
-  <script src="app/services/myFirstService.js"></script>
 
 </body>
 </html>

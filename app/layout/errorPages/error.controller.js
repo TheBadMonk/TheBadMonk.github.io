@@ -1,7 +1,7 @@
 (function(){
   'use strict';
-  var myApp = angular.module('myApp');
-  myApp.controller('ErrorController', ['$scope', errorController]);
+  var app = angular.module('app');
+  app.controller('ErrorController', ['$scope', errorController]);
 
   function errorController($scope) {
     var vm = this;
