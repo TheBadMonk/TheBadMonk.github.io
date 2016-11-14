@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   var app = angular.module('app');
-  app.controller('HomeContentController', ['$scope', homeContentController]);
+  app.controller('HomeContentController', [homeContentController]);
   function homeContentController() {
     var vm = this;
   }

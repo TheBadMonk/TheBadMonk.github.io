@@ -1,0 +1,22 @@
+.page-mask {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.page-wrapper {
+  height: 200px;
+  margin: 30px 30px;
+  overflow: hidden;
+}
+
+.page-text {
+  font-size: 1em;
+}
+
+.priority-z-index {
+  z-index: 9001;
+}

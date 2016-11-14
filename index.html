@@ -1,7 +1,5 @@
+
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
@@ -9,51 +7,47 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!--favicon-->
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
-
-  <!--styles-->
-  <!-- <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"/> -->
-  <link rel="stylesheet" href="assets/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+  <!--CSS-->
+  <link rel="stylesheet" href="/app/css/global.css">
+  <!--Bootstrap CSS-->
+  <link rel="stylesheet" href="assets/lib/bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
 </head>
+<body ng-cloak>
+  <!--[if lt IE 9]>
+      <p>You are using an <strong>outdated</strong> browser. Please delete your computer.</p>
+  <![endif]-->
 
-<body class="body" ng-cloak>
-  <!--Content Area-->
-  <div ng-include="'/app/layout/home/home.html'"></div>
+  <!--Instantiation for the main site container including header/footer/sidebar/content-->
+  <!--Routable content is in the ui-view inside the mainContentPane component-->
+  <div class="app-container">
+    <site-container></site-container>
+  </div>
 
-
-  <!--3rd party libraries-->
+  <!--Vendor Libraries-->
+  <!--jQuery-->
+    <script src="assets/lib/jquery-3.1.0/jquery-3.1.0.min.js"></script>
   <!--Angular 1.5.8-->
-  <script src="assets/libs/angular-1.5.8/angular.js"></script>
-  <script src="assets/libs/angular-1.5.8/angular-route.js"></script>
-  <script src="assets/libs/angular-1.5.8/angular-animate.js"></script>
-
-  <!--jQuery 3.1.0-->
-  <script src="assets/libs/jquery-3.1.0/jquery-3.1.0.min.js"></script>
-
+    <script src="assets/lib/angular-1.5.8/angular.js"></script>
+  <!--angular-ui-->
+    <script src="assets/lib/angular-ui/angular-ui-router.js"></script>
   <!--Bootstrap 3.3.7-->
-  <script src="assets/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="assets/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
 
-  <!--Source files-->
-  <!--Routes and app initialization-->
-  <script src="app/app.module.js"></script>
-  <script src="app/app.routes.js"></script>
-
-  <!--Website components-->
-  <script src="app/components/homeContent/homeContent.controller.js"></script>
-
-  <!--Shared website components-->
-  <script src="app/layout/home/home.controller.js"></script>
-  <script src="app/layout/contentArea/contentArea.controller.js"></script>
-  <script src="app/layout/footer/footer.controller.js"></script>
-  <script src="app/layout/header/header.controller.js"></script>
-  <script src="app/layout/sidebar/sidebar.controller.js"></script>
-  <script src="app/layout/errorPages/error.controller.js"></script>
-
-  <!--Services-->
-
+    <!--Routes and app initialization-->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <!--site container-->
+    <script src="app/features/siteContainer/siteContainer.component.js"></script>
+      <!--site container components-->
+      <script src="app/features/siteContainer/components/footer/footer.component.js"></script>
+      <script src="app/features/siteContainer/components/header/header.component.js"></script>
+      <script src="app/features/siteContainer/components/mainContentPane/mainContentPane.component.js"></script>
+      <script src="app/features/siteContainer/components/sidebar/sidebar.component.js"></script>
+    <!--home content-->
+    <script src="app/features/homecontent/homeContent.controller.js"></script>
 </body>
 </html>
